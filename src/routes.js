@@ -40,9 +40,9 @@ routes.post('/job', (req, res) => {jobs.push(req.body)
    const lastId = jobs[jobs.length - 1]?.id || 1 ;
 	  job.push({
 	 	 	id:	lastbId + 1,
-	 	  name: req.body.name;
-	    'daily-hours': req.body['dailyi-hours'];
-	 	  'total-hours': req.body['total-hours'];
+	 	  name: req.body.name,
+	    'daily-hours': req.body['dailyi-hours'],
+	 	  'total-hours': req.body['total-hours'],
 	 	  create_at: Date.now() // atribuindo data de hoje
   	});
 	 		return res.redirect('/');
