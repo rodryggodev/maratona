@@ -8,6 +8,9 @@ server.set('view engine', 'ejs');
 // midlewer -> faz o meio de campo, serve como um filtro
 server.use(express.static('public'));
 
+// usar o req.body la da rota no metodo post
+server.use(express.urlencoded({extended: true}))
+
 // puxando do arquivo routes.js
 server.use(routes)
 
